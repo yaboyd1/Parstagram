@@ -15,7 +15,6 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
-
     public static final String TAG = "LoginActivity";
     private EditText etUsername;
     private EditText etPassword;
@@ -26,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // If the user has already logged in, go straight to the Main Activity
         if (ParseUser.getCurrentUser() != null){
             goMainActivity();
         }
@@ -33,10 +33,12 @@ public class LoginActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
+
+        // Login Button
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i(TAG, "onClick for login");
+                Log.i(TAG, "onClick for LoginActivity");
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
                 loginUser(username, password);
@@ -60,6 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    // Goes to the Main Activity
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
