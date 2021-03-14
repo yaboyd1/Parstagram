@@ -29,7 +29,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='/demonstrations/TakePicture.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src='/demonstrations/userPersists.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/demonstrations/UserPersists.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
